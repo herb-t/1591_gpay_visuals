@@ -1,0 +1,38 @@
+# This file configures your App Engine App.
+# See https://goo.gl/fW55As for details.
+
+runtime: python27
+api_version: 1
+threadsafe: yes
+
+
+# Upgrades instance class size for better CPU/memory in staging.
+instance_class: F4_1G
+
+
+# Handles background tasks like sending analytics to Firebase.
+builtins:
+- deferred: on
+
+
+handlers:
+# Sends all requests to the Bracket app in src.routes and restricts access to
+# App Engine admins.
+- url: .*
+  script: src.routes.bracket.app
+  login: admin
+  secure: always
+# Allows running background tasks with the App Engine deferred library.
+- url: /_ah/queue/deferred
+  script: google.appengine.ext.deferred.deferred.application
+  login: admin
+  secure: always
+
+
+# Third party libraries that are included in the App Engine SDK must be listed
+# here if you want to use them.
+libraries:
+- name: setuptools
+  version: latest
+- name: ssl
+  version: latest

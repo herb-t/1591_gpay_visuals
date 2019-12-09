@@ -1,0 +1,11 @@
+// Glue global and components styles
+@import '@google/glue/scss/global/all';
+@import '@google/glue/scss/components/all';
+
+// Sample project styles.
+@import 'main/main';
+@import 'breakpoint/breakpoint';
+@import 'carousel/carousel';
+
+// Glue modifiers.
+@import '@google/glue/scss/modifiers/all';

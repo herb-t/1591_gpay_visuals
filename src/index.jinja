@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="{{g.page.locale.babel.language}}"{% if g.page and g.page.locale and g.page.locale.lang_is_rtl %} dir="rtl"{% endif %}>
+  <head>
+    <meta charset="utf-8">
+    <meta content="initial-scale=1, minimum-scale=1, width=device-width" name="viewport">
+    <title>{{content.title}}</title>
+    <meta name="referrer" content="no-referrer" />
+    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="https://storage.googleapis.com/operating-anagram-8280/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://storage.googleapis.com/operating-anagram-8280/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://storage.googleapis.com/operating-anagram-8280/favicon-16x16.png">
+    <link rel="shortcut icon" href="https://storage.googleapis.com/operating-anagram-8280/favicon.ico">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:100,300,400,500,700|Google+Sans:400,500|Product+Sans:400&amp;lang=en">
+    <link href="{{"css/index.min.css"|static}}" rel="stylesheet">
+    <script src="{{"js/detect.min.js"|static}}"></script>
+  </head>
+
+  <body data-ng-controller="MainController as ctrl">
+    <main class="glue-page b-demo-page">
+      {% include "header/header.jinja" %}
+
+      <section class="glue-mod-spacer-4-top">
+        {% include "carousel/carousel.jinja" %}
+      </section>
+
+      <section class="glue-mod-spacer-4-bottom glue-mod-spacer-4-top">
+        <div class="glue-grid">
+          <div class="glue-grid__col glue-grid__col--span-10">
+            <h2 class="glue-headline glue-headline--3 glue-has-bottom-margin" unite-orphan="15">{{content.web_standard_intro}}</h2>
+            <p class="glue-copy" unite-orphan="15">{{content.web_standard_is}}</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="glue-mod-spacer-4-bottom">
+        {% include "tabset/tabset.jinja" %}
+      </section>
+
+      <section class="glue-mod-spacer-4-bottom">
+        <h1 class="glue-headline glue-headline--headline-3 h-has-bottom-margin">{{content.resources_heading}}</h1>
+        <ul class="glue-tile-set glue-mod-spacer-4-bottom glue-mod-spacer-4-top">
+          {% for tile in content.tiles %}
+          <li>
+            <a class="glue-tile glue-tile--border glue-tile--hoverable" href="{{ tile.link }}" target="_blank">
+              <div class="glue-tile__header b-demo-tile__header">
+                <picture>
+                  <source media="(min-width: 768px)"
+                          srcset="{{ tile.image|static }}">
+                  <img srcset="{{ tile.image|static }}">
+                </picture>
+              </div>
+              <div class="glue-tile__body">
+                <h4 class="glue-tile__headline">
+                  {{ tile.title }}
+                </h4>
+                <p class="glue-tile__description">
+                  {{ tile.description }}
+                </p>
+                <ul class="glue-tile__links">
+                  <li class="glue-tile__link">
+                    <svg role="img" class="glue-icon glue-icon--24px">
+                      <use xlink:href="/static/img/glue-icons.svg#arrow-forward"></use>
+                    </svg>
+                  </li>
+                </ul>
+              </div>
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+      </section>
+    </main>
+
+    {% include "footer/footer.jinja" %}
+
+    <script src="https://www.gstatic.com/external_hosted/hammerjs/v2_0_2/hammer.min.js"></script>
+    <script src="{{"js/index.min.js"|static}}"></script>
+  </body>
+</html>

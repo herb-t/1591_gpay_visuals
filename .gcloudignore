@@ -1,0 +1,43 @@
+# Exclude all files starting with "."
+.*
+# Exclude filetypes not needed
+*.pyc
+*.pyo
+*.so
+*.cc
+*.h
+*.pth
+# Exclude gulp and kokoro files
+gulp/
+gulpfile.js
+kokoro/
+kokoro-presubmit.sh
+# Exclude package-lock.json because it can change on `npm i` but isn't actually
+# needed for the app to work on App Engine.
+package-lock.json
+# Exclude built files
+dist/
+# Exclude dist-info dirs
+*.dist-info/
+# Exclude test dirs
+tests/
+# Exclude unneeded node modules (only upload @google modules)
+node_modules/*
+!node_modules/@google
+# Exclude everything in bracket except necessary python files
+node_modules/@google/bracket/*
+!node_modules/@google/bracket/python
+node_modules/@google/bracket/python/env/*
+!node_modules/@google/bracket/python/env/lib
+node_modules/@google/bracket/python/env/lib/*
+!node_modules/@google/bracket/python/env/lib/python2.7
+node_modules/@google/bracket/python/env/lib/python2.7/*
+!node_modules/@google/bracket/python/env/lib/python2.7/site-packages
+# Exclude unneeded packages
+node_modules/@google/bracket/python/env/lib/python2.7/site-packages/easy_install*
+node_modules/@google/bracket/python/env/lib/python2.7/site-packages/pip
+node_modules/@google/bracket/python/env/lib/python2.7/site-packages/pkg_resources
+node_modules/@google/bracket/python/env/lib/python2.7/site-packages/set_up_preview_client
+node_modules/@google/bracket/python/env/lib/python2.7/site-packages/setuptools
+node_modules/@google/bracket/python/env/lib/python2.7/site-packages/termcolor*
+node_modules/@google/bracket/python/env/lib/python2.7/site-packages/wheel

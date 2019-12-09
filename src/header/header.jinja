@@ -1,0 +1,89 @@
+<header class="glue-header glue-header--single">
+    <div class="glue-header__bar glue-header__bar--desktop glue-header__drawer">
+        <div class="glue-header__tier">
+            <!-- LOCK up-->
+            <div class="glue-header__container">
+                <div class="glue-header__lock-up">
+                    <div class="glue-header__logo">
+                        <a class="glue-header__logo-link" href="https://www.google.com" title="Google">
+                            <div class="glue-header__logo-container">
+                                <svg role="img" aria-hidden="true" class="glue-header__logo-svg">
+                                  <use xlink:href="/static/img/glue-icons.svg#google-color-logo"></use>
+                                </svg>
+                            </div>
+                            <p class="glue-header__logo--product">Product</p>
+                        </a>
+                    </div>
+                    <a href="#page-content" class="glue-header__skip-content">
+                        <p class="glue-header__skip-content-text">Jump to Content</p>
+                    </a>
+                </div>
+            </div>
+
+            <!-- LINK BAR-->
+            <div class="glue-header__container glue-header__container--flex-auto">
+                <nav class="glue-header__link-bar">
+                    <ul id="list-1" class="glue-header__list">
+                        {% for item in content.nav %}
+                          <li class="glue-header__item
+                              {% if item.url == '/' %} glue-header--is-active{% endif %}">
+                              <a class="glue-header__link" href="{{item.url}}">{{item.label}}</a>
+                          </li>
+                        {% endfor %}
+                    </ul>
+                </nav>
+            </div>
+            <!-- CTA-->
+            <div class="glue-header__container glue-header__container--cta">
+                <div class="glue-header__cta">
+                    <button class="glue-button glue-button--medium-emphasis">
+                    Secondary Action
+                    </button>
+                    <button class="glue-button glue-button--high-emphasis">
+                    Primary Action
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Mobile header placeholder -->
+    <div class="glue-header__bar glue-header__bar--mobile">
+        <div class="glue-header__tier">
+            <!-- LOCK up-->
+            <div class="glue-header__container">
+                <div class="glue-header__lock-up">
+                    <div class="glue-header__hamburger glue-header__hamburger--first-tier">
+                        <div class="glue-header__hamburger-wrapper">
+                            <button type="button" class="glue-header__drawer-toggle-btn"
+                                aria-controls="drawer" aria-expanded="false" aria-label="Open the navigation drawer">
+                                <svg role="img" class="glue-icon glue-icon--24px"><use xlink:href="/static/img/glue-icons.svg#menu"></use></svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="glue-header__logo">
+                        <a class="glue-header__logo-link" href="https://www.google.com" title="Google">
+                            <div class="glue-header__logo-container">
+                                <svg role="img" aria-hidden="true" class="glue-header__logo-svg">
+                                    <use xlink:href="/static/img/glue-icons.svg#google-color-logo"></use>
+                                </svg>
+                            </div>
+                            <p class="glue-header__logo--product">Product</p>
+                        </a>
+                    </div>
+                    <!-- SKIP -->
+                    <a href="#page-content" class="glue-header__skip-content">
+                        <p class="glue-header__skip-content-text">Jump to Content</p>
+                    </a>
+                </div>
+            </div>
+            <!-- CTA -->
+            <div class="glue-header__container">
+                <div class="glue-header__cta">
+                    <button class="glue-button glue-button--medium-emphasis">Secondary Action</button>
+                    <button class="glue-button glue-button--high-emphasis">Primary Action</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="glue-header__drawer-backdrop"></div>
+</header>

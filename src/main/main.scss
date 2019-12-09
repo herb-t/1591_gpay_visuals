@@ -1,0 +1,29 @@
+// Styles for demo page.
+.b-demo-u-d-n {
+  display: none;
+}
+
+.b-demo-page {
+  // Fix Glue header product name/logo alignment.
+  .glue-header__product-logo-link,
+  .glue-header__drawer-product-logo-link {
+    padding-top: 3px;
+  }
+
+  // Fix Glue modal close button having border radius.
+  .glue-modal__close {
+    border-radius: 0;
+  }
+
+  .b-demo-tile__header {
+    height: 170px;
+    overflow: hidden;
+    width: 100%;
+  }
+}
+
+@mixin mq-min($bp-size) {
+  @media all and (min-width: $bp-size) {
+    @content;
+  }
+}

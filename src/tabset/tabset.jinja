@@ -1,0 +1,23 @@
+<div class="glue-tabset">
+  <ul class="glue-tabs glue-tabset__tablist">
+    {% for tab in content.tabby %}
+    <li class="glue-tabset__tab">
+      <a href="#tab-{{loop.index}}" class="glue-tabset__button" data-glue-pagination-page="{{loop.index}}">{{tab.title}}</a>
+    </li>
+    {% endfor %}
+  </ul>
+
+  <ul class="glue-pagination-pages glue-tabset__panel-container">
+    {% for tab in content.tabby %}
+    <li data-glue-label="{{tab.title}}" id="b-demo-tab--{{tab.id}}"
+        class="glue-pagination__page glue-tabset__page">
+      <h3 class="glue-mod-font-weight-regular">{{tab.title}}</h3>
+      <div class="glue-grid">
+        <div class="glue-grid__col glue-grid__col--span-4">
+          {{tab.content}}
+        </div>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
