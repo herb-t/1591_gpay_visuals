@@ -38,4 +38,59 @@ init('.glue-tabs', Tabs.attachTo);
 init('.glue-tabset .glue-pagination-pages', PaginationPages.attachTo);
 
 
+//mouseover events
+const dots = document.querySelectorAll('.graphic__dot-interact');
+const info = document.querySelectorAll('.graphic__info');
+
+for (let index = 0; index < dots.length; index++) {
+  const element = dots[index];
+  const dotIndex = element.getAttribute('data-dot-index');
+
+  for (let i = 0; i < info.length; i++) {
+    const el = info[i];
+    const dotInfo = el.getAttribute('data-dot-info')
+
+    if (dotIndex == dotInfo) {
+      let x = element.offsetLeft;
+      let y = element.offsetTop;
+
+      console.log(element, x, y)
+
+      // console.log(element, 'x: ', x);
+      // console.log(element, 'y: ', y);
+
+      el.style.top = y + 'px';
+      el.style.left = x + 'px';
+    }
+  }
+
+  element.addEventListener('mouseover', () => {
+
+    for (let i = 0; i < info.length; i++) {
+      const el = info[i];
+      const dotInfo = el.getAttribute('data-dot-info')
+
+      if (dotIndex == dotInfo) {
+        el.style.opacity = 1;
+      }
+    }
+    
+  })
+
+  element.addEventListener('mouseleave', () => {
+
+    for (let i = 0; i < info.length; i++) {
+      const el = info[i];
+      const dotInfo = el.getAttribute('data-dot-info')
+
+      if (dotIndex == dotInfo) {
+        el.style.opacity = 0;
+      }
+    }
+    
+  })
+    
+}
+
+
 export {};

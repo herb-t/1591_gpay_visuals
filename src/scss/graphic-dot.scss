@@ -5,6 +5,8 @@
 
 .graphic__dot-interact {
   background: $glue-blue-600;
+  position: absolute;
+  z-index: 99;
 
   @media (min-width: 900px) {
     &:hover {

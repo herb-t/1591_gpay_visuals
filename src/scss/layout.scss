@@ -3,8 +3,14 @@
   display: none;
 }
 
+body {
+  overflow-x: hidden;
+  position: relative;
+}
+
 .glue-header .glue-header__bar.glue-header__bar--mobile {
   left: 0;
+  z-index: 100;
 }
 
 .glue-headline {
@@ -45,5 +51,23 @@
 @mixin mq-min($bp-size) {
   @media all and (min-width: $bp-size) {
     @content;
+  }
+}
+
+.color-u {
+  &-yellow {
+    color: $glue-yellow-600;
+  }
+
+  &-blue {
+    color: $glue-blue-600;
+  }
+
+  &-green {
+    color: $glue-green-600;
+  }
+
+  &-red {
+    color: $glue-red-600;
   }
 }
