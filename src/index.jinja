@@ -15,27 +15,32 @@
   </head>
 
   <body data-ng-controller="MainController as ctrl">
-    <main class="glue-page b-demo-page">
+    <main class="glue-page">
       {% include "header/header.jinja" %}
 
       <section class="glue-mod-spacer-4-top">
-        {% include "carousel/carousel.jinja" %}
+        <h1 class="glue-headline glue-headline--headline-1 h-has-bottom-margin">Congrats</h1>
+        <p class="glue-copy">lorem</p>
       </section>
 
-      <section class="glue-mod-spacer-4-bottom glue-mod-spacer-4-top">
+      <section class="graphic">
+        {% include "main/graphic.jinja" %}
+      </section>
+
+      {# <section class="glue-mod-spacer-4-bottom glue-mod-spacer-4-top">
         <div class="glue-grid">
           <div class="glue-grid__col glue-grid__col--span-10">
             <h2 class="glue-headline glue-headline--3 glue-has-bottom-margin" unite-orphan="15">{{content.web_standard_intro}}</h2>
             <p class="glue-copy" unite-orphan="15">{{content.web_standard_is}}</p>
           </div>
         </div>
-      </section>
+      </section> #}
 
-      <section class="glue-mod-spacer-4-bottom">
+      {# <section class="glue-mod-spacer-4-bottom">
         {% include "tabset/tabset.jinja" %}
-      </section>
+      </section> #}
 
-      <section class="glue-mod-spacer-4-bottom">
+      {# <section class="glue-mod-spacer-4-bottom">
         <h1 class="glue-headline glue-headline--headline-3 h-has-bottom-margin">{{content.resources_heading}}</h1>
         <ul class="glue-tile-set glue-mod-spacer-4-bottom glue-mod-spacer-4-top">
           {% for tile in content.tiles %}
@@ -67,10 +72,10 @@
           </li>
           {% endfor %}
         </ul>
-      </section>
+      </section> #}
     </main>
 
-    {% include "footer/footer.jinja" %}
+    {# {% include "footer/footer.jinja" %} #}
 
     <script src="https://www.gstatic.com/external_hosted/hammerjs/v2_0_2/hammer.min.js"></script>
     <script src="{{"js/index.min.js"|static}}"></script>

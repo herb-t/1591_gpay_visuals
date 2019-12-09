@@ -14,11 +14,40 @@
   .glue-modal__close {
     border-radius: 0;
   }
+}
 
-  .b-demo-tile__header {
-    height: 170px;
-    overflow: hidden;
-    width: 100%;
+.glue-header .glue-header__bar.glue-header__bar--mobile {
+  left: 0;
+}
+
+@mixin on-circle($item-count, $circle-size, $item-size) {
+  border-radius: 50%;
+  height: $circle-size;
+  list-style: none;
+  padding: 0;
+  position: relative;
+  width:  $circle-size;
+
+  > * {
+    display: block;
+    height: $item-size;
+    left: 50%;
+    margin: -($item-size / 2);
+    position: absolute;
+    top:  50%;
+    width:  $item-size;
+    z-index: 100;
+
+    $angle: (360 / $item-count);
+    $rot: 0;
+
+    @for $i from 1 through $item-count {
+      &:nth-of-type(#{$i}) {
+        transform: rotate($rot * 1deg) translate($circle-size / 2) rotate($rot * -1deg);
+      }
+
+      $rot: $rot + $angle;
+    }
   }
 }
 
@@ -27,3 +56,184 @@
     @content;
   }
 }
+
+// .graphic-container {
+//   @include on-circle($item-count: 8, $circle-size: 20em, $item-size: 6em);
+
+//   margin: 5em auto 0;
+//   border: solid 5px tomato;
+  
+//   img { 
+//     display: block; 
+//     max-width: 100%; 
+//     border-radius: 50%;
+//     filter: grayscale(100%);
+//     border: solid 5px tomato;
+//     transition: .15s;
+    
+//     &:hover,
+//     &:active {
+//       filter: grayscale(0);
+//     }
+//   }
+// }
+
+.graphic {
+
+  &__container {
+    min-height: 500px;
+    position: relative;
+    outline: 1px solid red;
+  }
+}
+
+.graphic__ring-container {
+  left: 50%;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  &--1 {
+    z-index: 6;
+  }
+
+  &--2 {
+    z-index: 5;
+  }
+
+  &--3 {
+    z-index: 4;
+  }
+
+  &--4 {
+    z-index: 3;
+  }
+
+  &--5 {
+    z-index: 2;
+  }
+
+  &--6 {
+    z-index: 1;
+  }
+}
+
+.graphic__ring {
+  // left: 50%;
+  // margin: 0 auto;
+  // top: 50%;
+  // transform: translate(-50%, -50%);
+  //border: 1px solid red;
+  margin: 0;
+}
+
+.graphic__ring--1 {
+  @include on-circle($item-count: 16, $circle-size: 100px, $item-size: 12px);
+}
+
+.graphic__ring--2 {
+  @include on-circle($item-count: 28, $circle-size: 140px, $item-size: 12px);
+}
+
+.graphic__ring--3 {
+  @include on-circle($item-count: 36, $circle-size: 180px, $item-size: 12px);
+}
+
+.graphic__ring--4 {
+  @include on-circle($item-count: 40, $circle-size: 220px, $item-size: 12px);
+}
+
+.graphic__ring--5 {
+  @include on-circle($item-count: 48, $circle-size: 260px, $item-size: 12px);
+}
+
+.graphic__ring--6 {
+  @include on-circle($item-count: 52, $circle-size: 300px, $item-size: 12px);
+}
+
+.graphic__dot {
+  background: rgba(0, 0, 0, .5);
+  border-radius: 50%;
+}
+
+// .graphic__dot-interact {
+//   @media (min-width: 900px) {
+
+//     &:hover {
+//       cursor: pointer;
+
+//       &::before {
+//         content: '';
+//         transform: scale(1.1);
+//         outline: 1px solid red;
+//       }
+//     }
+//   }
+// }
+
+.graphic__dot-interact {
+  @media (min-width: 900px) {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &--blue {
+    background: $glue-blue-600;
+
+    @media (min-width: 900px) {
+      &:hover {
+        &::before {
+          border: 2px solid $glue-blue-600;
+          border-radius: 50%;
+          content: '';
+          display: block;
+          height: 20px;
+          left: 50%;
+          position: absolute;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          width: 20px;
+        }
+      }
+    }
+  }
+}
+
+// .graphic__dot-interact {
+
+//   @media (min-width: 900px) {
+
+//     &:hover {
+//       cursor: pointer;
+
+//       &--blue {
+//         background: $glue-blue-600;
+
+//         &::before {
+//           border: 2px solid $glue-blue-600;
+//           content: '';
+//           display: block;
+//           height: 20px;
+//           left: 50%;
+//           position: absolute;
+//           top: 50%;
+//           transform: translate(-50%, -50%);
+//           width: 20px;
+//         }
+//       }
+//     }
+//   }
+
+//   // &--blue {
+//   //   background: $glue-blue-600;
+
+//   //   &::before {
+//   //     content: '';
+//   //     transform: scale(1.1);
+//   //     outline: 1px solid red;
+//   //   }
+//   // }
+// }
+

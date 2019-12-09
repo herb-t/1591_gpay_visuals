@@ -11,7 +11,7 @@
                                   <use xlink:href="/static/img/glue-icons.svg#google-color-logo"></use>
                                 </svg>
                             </div>
-                            <p class="glue-header__logo--product">Product</p>
+                            <p class="glue-header__logo--product">Gpay</p>
                         </a>
                     </div>
                     <a href="#page-content" class="glue-header__skip-content">
@@ -23,26 +23,26 @@
             <!-- LINK BAR-->
             <div class="glue-header__container glue-header__container--flex-auto">
                 <nav class="glue-header__link-bar">
-                    <ul id="list-1" class="glue-header__list">
+                    {# <ul id="list-1" class="glue-header__list">
                         {% for item in content.nav %}
                           <li class="glue-header__item
                               {% if item.url == '/' %} glue-header--is-active{% endif %}">
                               <a class="glue-header__link" href="{{item.url}}">{{item.label}}</a>
                           </li>
                         {% endfor %}
-                    </ul>
+                    </ul> #}
                 </nav>
             </div>
             <!-- CTA-->
             <div class="glue-header__container glue-header__container--cta">
-                <div class="glue-header__cta">
+                {# <div class="glue-header__cta">
                     <button class="glue-button glue-button--medium-emphasis">
                     Secondary Action
                     </button>
                     <button class="glue-button glue-button--high-emphasis">
                     Primary Action
                     </button>
-                </div>
+                </div> #}
             </div>
         </div>
     </div>
@@ -52,7 +52,7 @@
             <!-- LOCK up-->
             <div class="glue-header__container">
                 <div class="glue-header__lock-up">
-                    <div class="glue-header__hamburger glue-header__hamburger--first-tier">
+                    <div class="glue-header__hamburger glue-header__hamburger--first-tier" style="display: none;">
                         <div class="glue-header__hamburger-wrapper">
                             <button type="button" class="glue-header__drawer-toggle-btn"
                                 aria-controls="drawer" aria-expanded="false" aria-label="Open the navigation drawer">
@@ -67,7 +67,7 @@
                                     <use xlink:href="/static/img/glue-icons.svg#google-color-logo"></use>
                                 </svg>
                             </div>
-                            <p class="glue-header__logo--product">Product</p>
+                            <p class="glue-header__logo--product">Gpay</p>
                         </a>
                     </div>
                     <!-- SKIP -->
@@ -77,12 +77,12 @@
                 </div>
             </div>
             <!-- CTA -->
-            <div class="glue-header__container">
+            {# <div class="glue-header__container">
                 <div class="glue-header__cta">
                     <button class="glue-button glue-button--medium-emphasis">Secondary Action</button>
                     <button class="glue-button glue-button--high-emphasis">Primary Action</button>
                 </div>
-            </div>
+            </div> #}
         </div>
     </div>
     <div class="glue-header__drawer-backdrop"></div>
