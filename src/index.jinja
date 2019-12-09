@@ -16,63 +16,12 @@
 
   <body data-ng-controller="MainController as ctrl">
     <main class="glue-page">
-      {% include "header/header.jinja" %}
 
-      <section class="glue-mod-spacer-4-top">
-        <h1 class="glue-headline glue-headline--headline-1 h-has-bottom-margin">Congrats</h1>
-        <p class="glue-copy">lorem</p>
-      </section>
+      {% include "components/header.jinja" %}
+      {% include "components/headline.jinja" %}
 
-      <section class="graphic">
-        {% include "main/graphic.jinja" %}
-      </section>
+      {% include "components/graphic.jinja" %}
 
-      {# <section class="glue-mod-spacer-4-bottom glue-mod-spacer-4-top">
-        <div class="glue-grid">
-          <div class="glue-grid__col glue-grid__col--span-10">
-            <h2 class="glue-headline glue-headline--3 glue-has-bottom-margin" unite-orphan="15">{{content.web_standard_intro}}</h2>
-            <p class="glue-copy" unite-orphan="15">{{content.web_standard_is}}</p>
-          </div>
-        </div>
-      </section> #}
-
-      {# <section class="glue-mod-spacer-4-bottom">
-        {% include "tabset/tabset.jinja" %}
-      </section> #}
-
-      {# <section class="glue-mod-spacer-4-bottom">
-        <h1 class="glue-headline glue-headline--headline-3 h-has-bottom-margin">{{content.resources_heading}}</h1>
-        <ul class="glue-tile-set glue-mod-spacer-4-bottom glue-mod-spacer-4-top">
-          {% for tile in content.tiles %}
-          <li>
-            <a class="glue-tile glue-tile--border glue-tile--hoverable" href="{{ tile.link }}" target="_blank">
-              <div class="glue-tile__header b-demo-tile__header">
-                <picture>
-                  <source media="(min-width: 768px)"
-                          srcset="{{ tile.image|static }}">
-                  <img srcset="{{ tile.image|static }}">
-                </picture>
-              </div>
-              <div class="glue-tile__body">
-                <h4 class="glue-tile__headline">
-                  {{ tile.title }}
-                </h4>
-                <p class="glue-tile__description">
-                  {{ tile.description }}
-                </p>
-                <ul class="glue-tile__links">
-                  <li class="glue-tile__link">
-                    <svg role="img" class="glue-icon glue-icon--24px">
-                      <use xlink:href="/static/img/glue-icons.svg#arrow-forward"></use>
-                    </svg>
-                  </li>
-                </ul>
-              </div>
-            </a>
-          </li>
-          {% endfor %}
-        </ul>
-      </section> #}
     </main>
 
     {# {% include "footer/footer.jinja" %} #}

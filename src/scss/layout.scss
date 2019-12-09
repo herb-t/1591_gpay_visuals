@@ -1,0 +1,49 @@
+// Styles for demo page.
+.b-demo-u-d-n {
+  display: none;
+}
+
+.glue-header .glue-header__bar.glue-header__bar--mobile {
+  left: 0;
+}
+
+.glue-headline {
+  hyphens: none;
+}
+
+@mixin on-circle($item-count, $circle-size, $item-size) {
+  border-radius: 50%;
+  height: $circle-size;
+  list-style: none;
+  padding: 0;
+  position: relative;
+  width:  $circle-size;
+
+  > * {
+    display: block;
+    height: $item-size;
+    left: 50%;
+    margin: -($item-size / 2);
+    position: absolute;
+    top:  50%;
+    width:  $item-size;
+    z-index: 100;
+
+    $angle: (360 / $item-count);
+    $rot: 0;
+
+    @for $i from 1 through $item-count {
+      &:nth-of-type(#{$i}) {
+        transform: rotate($rot * 1deg) translate($circle-size / 2) rotate($rot * -1deg);
+      }
+
+      $rot: $rot + $angle;
+    }
+  }
+}
+
+@mixin mq-min($bp-size) {
+  @media all and (min-width: $bp-size) {
+    @content;
+  }
+}

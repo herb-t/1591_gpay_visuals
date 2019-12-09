@@ -3,9 +3,14 @@
 @import '@google/glue/scss/components/all';
 
 // Sample project styles.
-@import 'main/main';
+// @import 'main/main';
+@import 'scss/layout';
 @import 'breakpoint/breakpoint';
 @import 'carousel/carousel';
+
+@import 'scss/graphic';
+@import 'scss/graphic-dot';
+@import 'scss/graphic-info';
 
 // Glue modifiers.
 @import '@google/glue/scss/modifiers/all';

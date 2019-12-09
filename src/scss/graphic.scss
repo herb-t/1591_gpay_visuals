@@ -1,0 +1,67 @@
+.graphic {
+
+  &__container {
+    min-height: 500px;
+    position: relative;
+  }
+}
+
+.graphic__ring-container {
+  left: 50%;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  &--1 {
+    z-index: 6;
+  }
+
+  &--2 {
+    z-index: 5;
+  }
+
+  &--3 {
+    z-index: 4;
+  }
+
+  &--4 {
+    z-index: 3;
+  }
+
+  &--5 {
+    z-index: 2;
+  }
+
+  &--6 {
+    z-index: 1;
+  }
+}
+
+.graphic__ring {
+  margin: 0;
+}
+
+.graphic__ring--1 {
+  @include on-circle($item-count: 16, $circle-size: 100px, $item-size: 12px);
+}
+
+.graphic__ring--2 {
+  @include on-circle($item-count: 28, $circle-size: 140px, $item-size: 12px);
+}
+
+.graphic__ring--3 {
+  @include on-circle($item-count: 36, $circle-size: 180px, $item-size: 12px);
+}
+
+.graphic__ring--4 {
+  @include on-circle($item-count: 40, $circle-size: 220px, $item-size: 12px);
+}
+
+.graphic__ring--5 {
+  @include on-circle($item-count: 48, $circle-size: 260px, $item-size: 12px);
+}
+
+.graphic__ring--6 {
+  @include on-circle($item-count: 52, $circle-size: 300px, $item-size: 12px);
+}
