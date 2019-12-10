@@ -8,14 +8,16 @@
   &__center {
     background-position: center center;
     background-repeat: no-repeat;
-    background-size: contain;
-    height: 60px;
+    background-size: 60px;
+    border: 1px solid $glue-grey-200;
+    border-radius: 50%;
+    height: 80px;
     left: 50%;
     pointer-events: none;
     position: absolute;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 60px;
+    width: 80px;
   }
 }
 
