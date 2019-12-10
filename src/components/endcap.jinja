@@ -1,5 +1,24 @@
 <section class="glue-mod-spacer-4-top glue-mod-spacer-4-bottom glue-mod-text-center">
   <div class="glue-grid">
+    {% for item in data.endcap %}
+      {% if loop.index is odd %}
+        <div class="glue-grid__col glue-grid__col--span-2 glue-grid__col--span-2-lg"></div>
+      {% endif %}
+      
+      <div class="glue-grid__col glue-grid__col--span-4 glue-grid__col--span-4-lg">
+        <h1 class="glue-headline glue-headline--headline-1 glue-has-top-bottom-margin color-u-{{item.color}}">
+          {{item.title}}
+        </h1>
+        <p class="glue-copy">({{loop.index}}){{item.subcopy}}</p>
+      </div>
+    {% endfor %}
+    
+
+  </div>
+</section>
+
+<section class="glue-mod-spacer-4-top glue-mod-spacer-4-bottom glue-mod-text-center">
+  <div class="glue-grid">
     <div class="glue-grid__col glue-grid__col--span-2 glue-grid__col--span-2-lg"></div>
     <div class="glue-grid__col glue-grid__col--span-4 glue-grid__col--span-4-lg">
       <h1 class="glue-headline glue-headline--headline-1 glue-has-top-bottom-margin color-u-yellow">

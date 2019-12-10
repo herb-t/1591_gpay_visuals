@@ -45,23 +45,47 @@ const info = document.querySelectorAll('.graphic__info');
 for (let index = 0; index < dots.length; index++) {
   const element = dots[index];
   const dotIndex = element.getAttribute('data-dot-index');
+  const parentEl = element.parentElement;
+  const parentElRect = parentEl.getBoundingClientRect();
+  const parentTop = parentElRect.top;
+  const parentLeft = parentElRect.left;
+
+  console.log(parentTop, parentLeft)
 
   for (let i = 0; i < info.length; i++) {
     const el = info[i];
     const dotInfo = el.getAttribute('data-dot-info')
 
-    if (dotIndex == dotInfo) {
+    switch (dotIndex) {
+      case dotInfo:
+
       let x = element.offsetLeft;
       let y = element.offsetTop;
 
-      console.log(element, x, y)
+      console.log(element)
 
       // console.log(element, 'x: ', x);
       // console.log(element, 'y: ', y);
 
       el.style.top = y + 'px';
       el.style.left = x + 'px';
+    
+      default:
+        break;
     }
+
+    // if (dotIndex == dotInfo) {
+    //   let x = element.offsetLeft;
+    //   let y = element.offsetTop;
+
+    //   console.log(element, x, y)
+
+    //   // console.log(element, 'x: ', x);
+    //   // console.log(element, 'y: ', y);
+
+    //   el.style.top = y + 'px';
+    //   el.style.left = x + 'px';
+    // }
   }
 
   element.addEventListener('mouseover', () => {

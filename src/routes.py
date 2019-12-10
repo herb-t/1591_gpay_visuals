@@ -17,6 +17,80 @@ global_site_vars = {
     'glue_version': 'v22_0'
 }
 
+data = {
+  'headline': 'Congratulations to the entire Google Pay team.',
+  'headline_subcopy': 'Explore the handful of moments, memories, and milestones that made 2019 quite the "spot-tacular" year.',
+  'info': [
+    {
+      'id': 1,
+      'text': 'In partnership with New York City transit, Google Pay launches on OMNY, it\'s tap-to-pay system.'
+    },
+    {
+      'id': 2,
+      'text': 'We announced our standalone app for merchants at Google for India, highlighting our video verification method that fastracks merchant onboarding (no more feet on the street!)'
+    },
+    {
+      'id': 3,
+      'text': 'Built directly within Google Pay, the Spot Platform provides a space for merchants to host, create, build direct relationships with users.'
+    },
+    {
+      'id': 4,
+      'text': 'We introduced the Jobs Spot on Google Pay to help people find entry level positions that aren’t always easily discoverable online.'
+    },
+    {
+      'id': 5,
+      'text': 'Google Pay hit 100m MAUs!!'
+    },
+    {
+      'id': 6,
+      'text': 'To celebrate Diwali, we introduced 5 unique festive stamps within the GPay app in India. In 3 weeks, 40M players played the game, making this India\'s #1 gaming app if it were standalone.'
+    },
+    {
+      'id': 7,
+      'text': 'The Yandex Taxi Campaign encouraged people paying with cash for taxis to start using Google Pay - The campaign drove 40k new MTUs within 5 days.'
+    },
+    {
+      'id': 8,
+      'text': 'Closed our first deal with Citibank, and introduced Cache to the world with a Wall Street Journal article.'
+    },
+    {
+      'id': 9,
+      'text': 'At the Singapore FinTech Festival, GPay 3.0 came to life at the world\'s largest trade conference for financial services partners attended by 40,000 guests from 130 countries.'
+    },
+    {
+      'id': 10,
+      'text': 'In a matter of months, the app hit 1M+ merchants onboarded - with a run rate of 25K merchants/day and an annualized TPV of USD 1 Billion.'
+    },
+  ],
+  'endcap': [
+    {
+      'title': '5B+',
+      'subcopy': 'transactions per year',
+      'color': 'yellow'
+    },
+    {
+      'title': '234',
+      'subcopy': 'countries and territories',
+      'color': 'blue'
+    },
+    {
+      'title': '1B+',
+      'subcopy': 'tap and pay transactions per year',
+      'color': 'red'
+    },
+    {
+      'title': '130',
+      'subcopy': '1st party merchants',
+      'color': 'yellow'
+    },
+    {
+      'title': '200+',
+      'subcopy': 'forms of payments supported',
+      'color': 'green'
+    }
+  ]
+}
+
 #########
 ######### Routes for the website.
 #########
@@ -111,6 +185,6 @@ def index():
 
     # At this point, results for each query are resolved.
     return flask.render_template(
-        'index.jinja', content=content, vars=global_site_vars)
+        'index.jinja', content=content, data=data, vars=global_site_vars)
 
 bracket.run()
