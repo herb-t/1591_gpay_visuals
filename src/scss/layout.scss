@@ -4,8 +4,16 @@
 }
 
 body {
+  background-image: url(../gpay_confetti_mobile.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
   overflow-x: hidden;
   position: relative;
+
+  @media (min-width: 900px) {
+    background-image: url(../gpay_confetti_desktop.png);
+  }
 }
 
 .glue-header .glue-header__bar.glue-header__bar--mobile {
@@ -15,6 +23,12 @@ body {
 
 .glue-headline {
   hyphens: none;
+}
+
+.header-gpay-logo {
+  max-width: 82px;
+  padding-left: 12px;
+  padding-right: 12px;
 }
 
 @mixin on-circle($item-count, $circle-size, $item-size) {
