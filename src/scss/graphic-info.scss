@@ -1,14 +1,14 @@
 .graphic__info {
-  position: absolute;
+  background: $glue-blue-600;
+  border-radius: 4px;
+  color: #fff;
+  left: 0;
+  opacity: 0;
+  padding: 8px 24px;
   pointer-events: none;
+  position: absolute;
   top: 0;
   transition: opacity .6 ease-out;
-  left: 0;
   width: 300px;
-  border-radius: 4px;
-  background: #fff;
-  padding: 4px 12px;
   z-index: 100;
-
-  opacity: 0;
 }
