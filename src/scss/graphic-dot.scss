@@ -10,7 +10,7 @@
 
   &::before {
     animation: pulse 3s ease-out;
-    animation-iteration-count: 3;
+    animation-iteration-count: infinite;
     border: 2px solid $glue-blue-600;
     border-radius: 50%;
     content: '';
@@ -32,10 +32,6 @@
       &::before {
         transform: translate(-50%, -50%) scale(1);
       }
-
-      // .graphic__info {
-      //   opacity: 1;
-      // }
     }
   }
 
@@ -104,6 +100,24 @@
         }
       }
     }
+  }
+}
+
+.bg-u {
+  &-yellow {
+    background: $glue-yellow-600;
+  }
+
+  &-blue {
+    background: $glue-blue-600;
+  }
+
+  &-green {
+    background: $glue-green-600;
+  }
+
+  &-red {
+    background: $glue-red-600;
   }
 }
 
