@@ -2,19 +2,22 @@
  * @fileoverview Entry point for the app. Initialize all Glue components.
  */
 
+// import {
+//     Carousel,
+//     PaginationModelFactory,
+//     PaginationNext,
+//     PaginationPageList,
+//     PaginationPrevious,
+//     Header,
+//     Tabs,
+//     PaginationPages,
+// } from '@google/glue';
 import {
-    Carousel,
-    PaginationModelFactory,
-    PaginationNext,
-    PaginationPageList,
-    PaginationPrevious,
-    Header,
-    Tabs,
-    PaginationPages,
+  Header
 } from '@google/glue';
 
-const paginationModel = PaginationModelFactory.get('demo-cyclical');
-paginationModel.cyclical = true;
+// const paginationModel = PaginationModelFactory.get('demo-cyclical');
+// paginationModel.cyclical = true;
 
 /**
  * @param {string} selector CSS selector.
@@ -25,17 +28,17 @@ const init = (selector, cb, opts = {}) =>
     [...document.querySelectorAll(selector)].forEach((el) => cb(el, opts));
 
 // Initializes Glue carousel
-init('.glue-pagination-page-list', PaginationPageList.attachTo);
-init('[data-glue-pagination-previous]', PaginationPrevious.attachTo);
-init('[data-glue-pagination-next]', PaginationNext.attachTo);
-init('.glue-carousel', Carousel.attachTo);
+// init('.glue-pagination-page-list', PaginationPageList.attachTo);
+// init('[data-glue-pagination-previous]', PaginationPrevious.attachTo);
+// init('[data-glue-pagination-next]', PaginationNext.attachTo);
+// init('.glue-carousel', Carousel.attachTo);
 
 // Initializes Glue header
 init('.glue-header', (element) => new Header(element));
 
 // Initializes Glue Tabs
-init('.glue-tabs', Tabs.attachTo);
-init('.glue-tabset .glue-pagination-pages', PaginationPages.attachTo);
+// init('.glue-tabs', Tabs.attachTo);
+// init('.glue-tabset .glue-pagination-pages', PaginationPages.attachTo);
 
 
 //mouseover events

@@ -4,7 +4,7 @@
     <li class="graphic__dot"></li>
     <li class="graphic__dot"></li>
     <li class="graphic__dot"></li>
-    <li class="graphic__dot graphic__dot graphic__dot-interact graphic__dot-interact--red"></li>
+    <li class="graphic__dot graphic__dot graphic__dot-interact graphic__dot-interact--{{data.dots.dot3.color}}" data-dot-index="{{data.dots.dot3.id}}"></li>
     <li class="graphic__dot"></li>
     <li class="graphic__dot"></li>
     <li class="graphic__dot"></li>
@@ -14,7 +14,7 @@
     <li class="graphic__dot"></li>
     <li class="graphic__dot"></li>
     <li class="graphic__dot"></li>
-    <li class="graphic__dot graphic__dot graphic__dot-interact graphic__dot-interact--yellow"></li>
+    <li class="graphic__dot graphic__dot graphic__dot-interact graphic__dot-interact--{{data.dots.dot4.color}}" data-dot-index="{{data.dots.dot4.id}}"></li>
     <li class="graphic__dot"></li>
     <li class="graphic__dot"></li>
     <li class="graphic__dot"></li>
@@ -29,4 +29,12 @@
     <li class="graphic__dot"></li>
     <li class="graphic__dot"></li>
   </ul>
+
+  <div class="graphic__info glue-mod-box-shadow-3" data-dot-info="{{data.dots.dot3.id}}">
+    <p class="graphic__info-copy">{{data.dots.dot3.text}}</p>
+  </div>
+
+  <div class="graphic__info glue-mod-box-shadow-3" data-dot-info="{{data.dots.dot4.id}}">
+    <p class="graphic__info-copy">{{data.dots.dot4.text}}</p>
+  </div>
 </div>

@@ -4,6 +4,19 @@
     min-height: 350px;
     position: relative;
   }
+
+  &__center {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 60px;
+    left: 50%;
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+  }
 }
 
 .graphic__ring-container {

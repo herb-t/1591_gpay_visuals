@@ -1,4 +1,5 @@
-<section class="glue-mod-spacer-4-top glue-mod-spacer-4-bottom glue-mod-text-center">
+{# TODO: Accomplish the below layout using a loop #}
+{# <section class="glue-mod-spacer-4-top glue-mod-spacer-4-bottom glue-mod-text-center">
   <div class="glue-grid">
     {% for item in data.endcap %}
       {% if loop.index is odd %}
@@ -9,13 +10,13 @@
         <h1 class="glue-headline glue-headline--headline-1 glue-has-top-bottom-margin color-u-{{item.color}}">
           {{item.title}}
         </h1>
-        <p class="glue-copy">({{loop.index}}){{item.subcopy}}</p>
+        <p class="glue-copy">{{item.subcopy}}</p>
       </div>
     {% endfor %}
     
 
   </div>
-</section>
+</section> #}
 
 <section class="glue-mod-spacer-4-top glue-mod-spacer-4-bottom glue-mod-text-center">
   <div class="glue-grid">

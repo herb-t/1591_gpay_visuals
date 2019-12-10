@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta content="initial-scale=1, minimum-scale=1, width=device-width" name="viewport">
-    <title>{{content.title}}</title>
+    <title>{{data.meta.title}}</title>
     <meta name="referrer" content="no-referrer" />
     <link rel="apple-touch-icon-precomposed" sizes="180x180" href="https://storage.googleapis.com/operating-anagram-8280/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="https://storage.googleapis.com/operating-anagram-8280/favicon-32x32.png">
@@ -26,7 +26,7 @@
 
     </main>
 
-    {# {% include "footer/footer.jinja" %} #}
+    {# {% include "components/footer.jinja" %} #}
 
     <script src="https://www.gstatic.com/external_hosted/hammerjs/v2_0_2/hammer.min.js"></script>
     <script src="{{"js/index.min.js"|static}}"></script>

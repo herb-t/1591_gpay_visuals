@@ -2,12 +2,8 @@
 @import '@google/glue/scss/global/all';
 @import '@google/glue/scss/components/all';
 
-// Sample project styles.
-// @import 'main/main';
+// Project styles.
 @import 'scss/layout';
-@import 'breakpoint/breakpoint';
-@import 'carousel/carousel';
-
 @import 'scss/graphic';
 @import 'scss/graphic-dot';
 @import 'scss/graphic-info';
