@@ -8,60 +8,83 @@
   position: absolute;
   z-index: 99;
 
+  &::before {
+    animation: pulse 3s ease-out;
+    animation-iteration-count: 3;
+    border: 2px solid $glue-blue-600;
+    border-radius: 50%;
+    content: '';
+    display: block;
+    height: 20px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transform-origin: center center;
+    transition: all .3s ease;
+    width: 20px;
+  }
+
   @media (min-width: 900px) {
     &:hover {
       cursor: pointer;
 
       &::before {
-        border: 2px solid $glue-blue-600;
-        border-radius: 50%;
-        content: '';
-        display: block;
-        height: 20px;
-        left: 50%;
-        position: absolute;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        width: 20px;
+        transform: translate(-50%, -50%) scale(1);
       }
 
-      .graphic__info {
-        opacity: 1;
-      }
+      // .graphic__info {
+      //   opacity: 1;
+      // }
     }
   }
 
   &--blue {
     background: $glue-blue-600;
 
+    &::before {
+      animation-delay: .25s;
+      border: 2px solid $glue-blue-600;
+    }
+
     @media (min-width: 900px) {
       &:hover {
         &::before {
-          border: 2px solid $glue-blue-600;
+          animation-iteration-count: 0;
         }
       }
     }
   }
 
   &--red {
+    animation-delay: .4s;
     background: $glue-red-600;
+
+    &::before {
+      border: 2px solid $glue-red-600;
+    }
 
     @media (min-width: 900px) {
       &:hover {
         &::before {
-          border: 2px solid $glue-red-600;
+          animation-iteration-count: 0;
         }
       }
     }
   }
 
   &--green {
+    animation-delay: .7s;
     background: $glue-green-600;
+
+    &::before {
+      border: 2px solid $glue-green-600;
+    }
 
     @media (min-width: 900px) {
       &:hover {
         &::before {
-          border: 2px solid $glue-green-600;
+          animation-iteration-count: 0;
         }
       }
     }
@@ -70,12 +93,34 @@
   &--yellow {
     background: $glue-yellow-600;
 
+    &::before {
+      border: 2px solid $glue-yellow-600;
+    }
+
     @media (min-width: 900px) {
       &:hover {
         &::before {
-          border: 2px solid $glue-yellow-600;
+          animation-iteration-count: 0;
         }
       }
     }
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+  }
+
+  25%,
+  75% {
+    opacity: .25;
+  }
+
+  50% {
+    opacity: .5;
+    transform: translate(-50%, -50%) scale(1);
   }
 }

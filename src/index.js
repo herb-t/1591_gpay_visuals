@@ -13,7 +13,7 @@
 //     PaginationPages,
 // } from '@google/glue';
 import {
-  Header
+  Header,
 } from '@google/glue';
 
 // const paginationModel = PaginationModelFactory.get('demo-cyclical');
@@ -41,7 +41,7 @@ init('.glue-header', (element) => new Header(element));
 // init('.glue-tabset .glue-pagination-pages', PaginationPages.attachTo);
 
 
-//mouseover events
+// mouseover events
 const dots = document.querySelectorAll('.graphic__dot-interact');
 const info = document.querySelectorAll('.graphic__info');
 
@@ -53,11 +53,11 @@ for (let index = 0; index < dots.length; index++) {
   const parentTop = parentElRect.top;
   const parentLeft = parentElRect.left;
 
-  console.log(parentTop, parentLeft)
+  console.log(parentTop, parentLeft);
 
   for (let i = 0; i < info.length; i++) {
     const el = info[i];
-    const dotInfo = el.getAttribute('data-dot-info')
+    const dotInfo = el.getAttribute('data-dot-info');
 
     switch (dotIndex) {
       case dotInfo:
@@ -65,14 +65,14 @@ for (let index = 0; index < dots.length; index++) {
       let x = element.offsetLeft;
       let y = element.offsetTop;
 
-      console.log(element)
+      console.log(element);
 
       // console.log(element, 'x: ', x);
       // console.log(element, 'y: ', y);
 
       el.style.top = y + 'px';
       el.style.left = x + 'px';
-    
+
       default:
         break;
     }
@@ -95,28 +95,28 @@ for (let index = 0; index < dots.length; index++) {
 
     for (let i = 0; i < info.length; i++) {
       const el = info[i];
-      const dotInfo = el.getAttribute('data-dot-info')
+      const dotInfo = el.getAttribute('data-dot-info');
 
       if (dotIndex == dotInfo) {
         el.style.opacity = 1;
       }
     }
-    
-  })
+
+  });
 
   element.addEventListener('mouseleave', () => {
 
     for (let i = 0; i < info.length; i++) {
       const el = info[i];
-      const dotInfo = el.getAttribute('data-dot-info')
+      const dotInfo = el.getAttribute('data-dot-info');
 
       if (dotIndex == dotInfo) {
         el.style.opacity = 0;
       }
     }
-    
-  })
-    
+
+  });
+
 }
 
 
