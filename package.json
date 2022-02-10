@@ -96,7 +96,7 @@
     "moment": "^2.18.1",
     "moment-duration-format": "^1.3.0",
     "node-notifier": "^5.0.2",
-    "node-sass": "^4.12.0",
+    "node-sass": "^7.0.0",
     "recursive-readdir-sync": "1.0.6",
     "sloc": "^0.2.0",
     "string-replace-loader": "^2.1.1",
