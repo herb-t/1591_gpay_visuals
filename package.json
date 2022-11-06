@@ -65,7 +65,7 @@
     "eslint-plugin-jsdoc": "^3.7.1",
     "google-closure-compiler": "^20190513.0.0",
     "google-closure-library": "^20190415.0.0",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-append-prepend": "^1.0.4",
     "gulp-autoprefixer": "^3.1.1",
     "gulp-batch": "1.0.5",
